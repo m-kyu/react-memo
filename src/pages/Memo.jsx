@@ -7,7 +7,7 @@ function Memo() {
   const [data,setData] = useState([]);
 
   useEffect(()=>{
-    axios.get('http://localhost:3000/memo')
+    axios.get(`${process.env.REACT_APP_APIURL}/memo`)
     .then(res=>{
       setData(res.data);
     })
