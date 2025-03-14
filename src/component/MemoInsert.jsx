@@ -35,7 +35,7 @@ function MemoInsert({data,setData}) {
         axios({
             url:`${process.env.REACT_APP_APIURL}/memo`,
             method:"post",
-            data:entries,
+            data:JSON.stringify(entries),
             headers:{"Content-Type": "application/json"}
         })
         .then(res=>{
